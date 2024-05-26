@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Potozki Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header,
+        footer {
+            position: relative;
+        }
+
+        #showcase {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: rgba(30, 30, 30, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-custom:hover {
+            background-color: rgba(40, 40, 40, 0.9);
+            backdrop-filter: blur(4px);
+        }
+
+        .card {
+            background-color: rgba(22, 33, 62, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .card-title,
+        .card-action a {
+            color: #e94560;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .nav-wrapper {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.1);
+            // backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        .page-footer {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.1);
+            // backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        .container>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        #aurora-nav,
+        #aurora-footer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrapper">
+            <canvas id="aurora-nav" class="aurora-canvas"></canvas>
+            <div class="container">
+                <a href="#" class="brand-logo">Martin Potozki</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="showcase" class="valign-wrapper">
+        <div class="container">
+            <h1>Welcome to my Webpage</h1>
+            <p>I'm a fullstack Software Developer specializing in .NET and React with TypeScript. I have also been working on small AR and VR applications for the Oculus Quest, as well as experimenting with AI models, Python and microcontrollers.</p>
+            <a href="#projects" class="btn btn-large btn-custom">See My Work</a>
+            <a id="warpButton" href="#" class="btn btn-large btn-custom">Warp</a>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="center-align">Projects</h2>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">ESP8266 Sensor Webserver</span>
+                            <p>Server on an ESP8266 microcontroller to display recent temperature and humidity values</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://github.com/maeinomatic/MicroPython_ESP8266_Webserver">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Sim Racing Shifter</span>
+                            <p>Code for Arduino Pro Micro to act as a USB shifter for sim racing games
+                            </p>
+                            <br>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://github.com/maeinomatic/Sim-Racing-Arduino-Shifter">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">openAI Speech-To-Text</span>
+                            <p>A console based speech-to-text application using OpenAI (when gpt4 just came out)</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://github.com/maeinomatic/openAiSpeechToText">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Next </span>
+                            <p>more coming soon....</p>
+
+                        </div>
+                        <div class="card-action">
+                            <br>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="page-footer">
+        <canvas id="aurora-footer" class="aurora-canvas"></canvas>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="center-align">
+                        Connect with me on 
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/maeinomatic"  target="_blank">GitHub</a> 
+                        and 
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/martin-potozki-400319125/" target="_blank">LinkedIn</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, stars, starGeo;
+        let warpActive = false;
+        let warpSpeed = 0;
+        const initialZ = 1; // Initial Z position
+        const warpDistance = 500; // Distance to move during warp
+        const starFieldSize = 600;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = initialZ;
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            starGeo = new THREE.BufferGeometry();
+            let vertices = [];
+            let sizes = [];
+            for (let i = 0; i < 6000; i++) {
+                let x = Math.random() * starFieldSize - starFieldSize / 2;
+                let y = Math.random() * starFieldSize - starFieldSize / 2;
+                let z = Math.random() * starFieldSize - starFieldSize / 2;
+                vertices.push(x, y, z);
+                sizes.push(Math.random() * 2 + 5.9); // Adjusted sizes to solve flickering
+            }
+            starGeo.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+            starGeo.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
+
+            const starMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                    color: { value: new THREE.Color(0xffffff) }
+                },
+                vertexShader: `
+            attribute float size;
+            varying float vOpacity;
+            void main() {
+                vOpacity = size / 3.0;
+                vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                gl_PointSize = size * (50.0 / -mvPosition.z); // Original size scaling
+                gl_Position = projectionMatrix * mvPosition;
+            }
+        `,
+                fragmentShader: `
+            uniform vec3 color;
+            varying float vOpacity;
+            void main() {
+                vec2 uv = gl_PointCoord.xy - 0.5;
+                float alpha = smoothstep(0.15, 0.45, 0.5 - length(uv)) * 0.8;
+                gl_FragColor = vec4( color, alpha * vOpacity);
+            }
+        `,
+                transparent: true
+            });
+
+            stars = new THREE.Points(starGeo, starMaterial);
+            scene.add(stars);
+
+            window.addEventListener('resize', onWindowResize, false);
+            document.addEventListener('scroll', onScroll, false);
+
+            const warpButton = document.getElementById('warpButton');
+            warpButton.addEventListener('click', startWarp);
+
+            animate();
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function onScroll() {
+            if (!warpActive) {
+                let scrollY = window.scrollY;
+                camera.position.y = -scrollY * 0.01; // Adjust the speed by changing the multiplier
+            }
+        }
+
+        function animate() {
+            // Update camera position during warp
+            if (warpActive) {
+                camera.position.z -= warpSpeed;
+                warpSpeed *= 1.05; // Increase speed for acceleration effect
+
+                if (warpSpeed > 100) warpSpeed = 100; // Limit the speed to avoid too fast movement
+
+                // Deactivate warp when target position is reached
+                if (camera.position.z <= initialZ - warpDistance) {
+                    warpActive = false;
+                    camera.position.z = initialZ; // Reset camera position for next warp
+                }
+            }
+
+            // Continuously reposition stars
+            const positions = starGeo.attributes.position.array;
+            for (let i = 0; i < positions.length; i += 3) {
+                if (positions[i + 2] > camera.position.z + starFieldSize / 2) {
+                    // Reposition stars that are far behind the camera
+                    positions[i + 2] -= starFieldSize;
+                    positions[i] = Math.random() * starFieldSize - starFieldSize / 2;
+                    positions[i + 1] = Math.random() * starFieldSize - starFieldSize / 2;
+                } else if (positions[i + 2] < camera.position.z - starFieldSize / 2) {
+                    // Reposition stars that are far in front of the camera
+                    positions[i + 2] += starFieldSize;
+                    positions[i] = Math.random() * starFieldSize - starFieldSize / 2;
+                    positions[i + 1] = Math.random() * starFieldSize - starFieldSize / 2;
+                }
+            }
+            starGeo.attributes.position.needsUpdate = true;
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+
+        function startWarp() {
+            if (warpActive) return; // Prevent multiple activations
+
+            warpActive = true;
+            warpSpeed = 0.5; // Initial speed for warp
+
+            // Defocus the warp button
+            document.getElementById('warpButton').blur();
+        }
+
+        init();
+
+        // Aurora effect functions
+        function createAurora(canvasId, height) {
+            let auroraScene, auroraCamera, auroraRenderer, auroraMaterial, auroraMesh;
+
+            function auroraInit() {
+                const canvas = document.getElementById(canvasId);
+                auroraScene = new THREE.Scene();
+                auroraCamera = new THREE.OrthographicCamera(-window.innerWidth / 2, window.innerWidth / 2, height / 2, -height / 2, 0.1, 1000);
+                auroraCamera.position.z = 1;
+
+                auroraRenderer = new THREE.WebGLRenderer({
+                    canvas: canvas,
+                    alpha: true
+                });
+                auroraRenderer.setSize(window.innerWidth, height);
+
+                const auroraGeometry = new THREE.PlaneGeometry(window.innerWidth, height);
+                auroraMaterial = new THREE.ShaderMaterial({
+                    uniforms: {
+                        time: { value: 1.0 },
+                        resolution: { value: new THREE.Vector2(window.innerWidth, height) }
+                    },
+                    vertexShader: `varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }`,
+                    fragmentShader: `
+            uniform float time;
+            uniform vec2 resolution;
+            varying vec2 vUv;
+            float random(in vec2 st) {
+                return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+            }
+            float noise(in vec2 st) {
+                vec2 i = floor(st);
+                vec2 f = fract(st);
+                float a = random(i);
+                float b = random(i + vec2(1.0, 0.0));
+                float c = random(i + vec2(0.0, 1.0));
+                float d = random(i + vec2(1.0, 1.0));
+                vec2 u = f * f * (3.0 - 2.0 * f);
+                return mix(a, b, u.x) +
+                    (c - a) * u.y * (1.0 - u.x) +
+                    (d - b) * u.x * u.y;
+            }
+            void main() {
+                vec2 st = vUv * vec2(6.0, 1.0);
+                float offset = noise(st + vec2(time * 0.1, 0.0));
+                vec3 color = vec3(
+                    0.0 + (0.6 * sin(3.0 * st.y + time + offset * 2.0)),
+                    0.3 + (0.7 * sin(3.0 * st.y + time + offset * 4.0)),
+                    0.0 + (0.6 * sin(3.0 * st.y + time + offset * 6.0)));
+                float alpha = 0.4 * smoothstep(0.1, 0.3, st.y) * smoothstep(0.9, 0.7, st.y);
+                gl_FragColor = vec4(color, alpha);
+            }`,
+                    transparent: true
+                });
+
+                auroraMesh = new THREE.Mesh(auroraGeometry, auroraMaterial);
+                auroraScene.add(auroraMesh);
+
+                animateAurora();
+            }
+
+            function animateAurora() {
+                auroraMaterial.uniforms.time.value += 0.01;
+                auroraRenderer.render(auroraScene, auroraCamera);
+                requestAnimationFrame(animateAurora);
+            }
+
+            auroraInit();
+        }
+
+        createAurora('aurora-nav', 60);
+        createAurora('aurora-footer', 100);
+    </script>
+</body>
+
+</html>
